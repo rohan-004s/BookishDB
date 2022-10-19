@@ -1,0 +1,21 @@
+
+
+
+ALTER TABLE Copies
+ADD CONSTRAINT FK_OrdersBook
+FOREIGN KEY (Book_ID) REFERENCES Books(BookID);
+
+
+ALTER TABLE Borrowed
+ADD CONSTRAINT FK_BorrowedUsers
+FOREIGN KEY (UserID) REFERENCES Users(UserID);
+
+
+
+ALTER TABLE Borrowed
+ADD CONSTRAINT FK_BorrowedBooks
+FOREIGN KEY (BookID) REFERENCES Books(BookID);
+
+
+
+
